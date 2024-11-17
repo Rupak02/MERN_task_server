@@ -2,14 +2,15 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const TodoModel = require("./models/Todo");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://Rupak_S:Rups12345@cluster0.gkirtd9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-  console.log("MongoDB connected")
+  process.env.MONGO_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 app.listen(5000, console.log("Server listening on port: 5000"));
