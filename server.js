@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://Rupak:RupakRupak@cluster0.jehtf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  "mongodb+srv://Rupak_S:Rups12345@cluster0.gkirtd9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
   console.log("MongoDB connected")
 );
 
